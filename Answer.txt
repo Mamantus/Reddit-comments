@@ -1,0 +1,41 @@
+## Bing
+
+To display the fetched API data on your webpage, you can map through the `comment` state and return JSX elements. Here's an example of how you can do it:
+
+```jsx
+function CreateComment() {
+    const [comment, setComment] = useState([])
+
+    useEffect (() => {
+        const fetchData = async () => {
+            const result = await fetch(URL)
+            result.json().then(json => {
+                console.log(json)
+                setComment(json.comments);
+            })       
+        }
+        fetchData();
+    }, []);
+
+    return (
+        <div>
+            {comment && comment.map((item, index) => (
+                <div key={index}>
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                </div>
+            ))}
+        </div>
+    )
+}
+```
+
+In this code, I'm assuming that each comment is an object with `title` and `body` properties. You'll need to adjust the properties according to the actual structure of your comment objects. This will create a new `<div>` for each comment with the title and body displayed. The `key` prop is given a unique value (in this case, the index of the comment in the array) to help React identify which items have changed, are added, or are removed. 
+
+Remember to import `useState` and `useEffect` from 'react' at the beginning of your file:
+
+```jsx
+import React, { useState, useEffect } from 'react';
+```
+
+I hope this helps! Let me know if you have any other questions. 😊

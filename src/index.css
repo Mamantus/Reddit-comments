@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.postedComment {
+  padding: 20px;
+  margin: 25px;
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 3px;
+}
+h4 {
+  margin: 25px;
+}
+h5 {
+  margin-left: 550px;
+}
+
+.commentForm {
+  padding: 20px;
+  margin: 25px;
+}
+
+.commentForm>input {
+  padding: 20px;
+}
+
+.commentForm>button {
+  padding: 20px;
+  cursor: pointer;
+}
