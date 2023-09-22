@@ -14,7 +14,7 @@ code {
 
 .postedComment {
   padding: 20px;
-  margin: 25px;
+  margin-left: 25px;
   border: 1px solid rgb(116, 116, 116);
   border-radius: 3px;
 }
@@ -27,14 +27,23 @@ h5 {
 
 .commentForm {
   padding: 20px;
-  margin: 25px;
+  margin-left: 43px;
 }
 
 .commentForm>input {
   padding: 20px;
+  width: 400px;
 }
 
 .commentForm>button {
   padding: 20px;
+  margin-left: 25px;
   cursor: pointer;
+}
+
+li {
+  display: flex;
+  margin-left: 25px;
+  margin-bottom: 5px;
+  list-style: none;
 }
